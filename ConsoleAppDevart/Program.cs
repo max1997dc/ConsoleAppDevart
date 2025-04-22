@@ -42,6 +42,7 @@ var peopleAtError = await dbContext.People
     .ToListAsync();
 
 
+//Work well
 var grupos2 = await dbContext.Grupos
     .Include(x => x.Persons)
     .ToListAsync();
