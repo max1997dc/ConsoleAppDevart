@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDevart", "ConsoleAppDevart\ConsoleAppDevart.csproj", "{AFCF637C-38CB-4A03-85D0-6C30308ADD4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCF637C-38CB-4A03-85D0-6C30308ADD4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCF637C-38CB-4A03-85D0-6C30308ADD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCF637C-38CB-4A03-85D0-6C30308ADD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCF637C-38CB-4A03-85D0-6C30308ADD4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4DA1085-80D7-4AAD-84A1-CB152E762FF4}
+	EndGlobalSection
+EndGlobal
