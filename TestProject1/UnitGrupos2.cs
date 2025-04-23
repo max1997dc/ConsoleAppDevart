@@ -5,27 +5,27 @@ using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using DbSetType = ConsoleAppDevart.Models.Grupo;
-using EnumType = ConsoleAppDevart.Enums.EnumAtivoInativoBool;
+//using EnumType = ConsoleAppDevart.Enums.EnumAtivoInativoBool;
 
 
 namespace TestProject1;
 
-public class UnitGrupos
+public class UnitGrupos2
 {
     private readonly AppDataContext appDataContext;
     private readonly DbSet<DbSetType> dbSet;
     private readonly IQueryable<DbSetType> includeQueryable;
-    private readonly EnumType enumValue;
+    private readonly EnumAtivoInativoBool enumValue;
     private readonly EnumAtivoInativoBool enumValue2;
 
     private readonly string name;
 
-    public UnitGrupos()
+    public UnitGrupos2()
     {
         this.appDataContext = new AppDataContext(AppDataContext.ConnectionStringDefault);
         this.dbSet = appDataContext.Set<DbSetType>();
         this.includeQueryable = dbSet.Include(x => x.Persons);
-        this.enumValue = EnumType.Ativo;
+        this.enumValue = EnumAtivoInativoBool.Ativo;
         this.enumValue2 = EnumAtivoInativoBool.Ativo;
         this.name = "Grupo1";
     }
@@ -113,5 +113,14 @@ public class UnitGrupos
         Assert.NotNull(records);
     }
 
+    [Fact]
+    public async Task Test_WhereEnum_Include_List4()
+    {
+        var enumv = EnumAtivoInativoBool.Ativo;
+        var records = await includeQueryable
+                .Where(x => x.Status == enumv)
+                .ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
 
 }
