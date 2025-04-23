@@ -44,6 +44,16 @@ public class UnitGrupos
         Assert.NotNull(records);
     }
 
+    [Theory]
+    [InlineData(1, 1)]
+    [InlineData(2, 3)]
+    [InlineData(0, 0)]
+    public async Task Test_TakeSkip_List(int take, int skip)
+    {
+        var records = await dbSet.Take(take).Skip(skip).ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
+
     [Fact]
     public async Task Test_Include_List()
     {
