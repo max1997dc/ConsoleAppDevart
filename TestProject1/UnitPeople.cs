@@ -112,4 +112,21 @@ public class UnitPeople
     }
 
 
+    [Theory]
+    [InlineData("stri")]
+    [InlineData("2, 3")]
+    public async Task Test_IncludeWithWhereStartWiths_List(string stri)
+    {
+        var records = await includeQueryable.Where(x => x.Name.StartsWith(stri)).ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
+
+    [Theory]
+    [InlineData("stri")]
+    [InlineData("user1")]
+    public async Task Test_IncludeWithWhereLowerStartWiths_List(string stri)
+    {
+        var records = await includeQueryable.Where(x => x.Name.ToLower().StartsWith(stri.ToLower())).ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
 }

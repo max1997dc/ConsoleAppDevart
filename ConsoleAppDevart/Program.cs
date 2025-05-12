@@ -21,6 +21,18 @@ var host = builder.ConfigureServices(ConfigureServices)
 
 var dbContext = host.Services.GetRequiredService<AppDataContext>();
 
+
+IQueryable<Person> issu1 = dbContext.People
+    .Include(x => x.Grupo)
+    .Where(x => x.Name.ToLower().StartsWith("stri"))
+    .AsQueryable();
+
+IQueryable<Person> okwithout = dbContext.People
+    //.Include(x => x.Grupo)
+    .Where(x => x.Name.ToLower().StartsWith("stri"))
+    .AsQueryable();
+
+
 var people = await dbContext.People.ToListAsync();
 var gruppi = await dbContext.Grupos.ToListAsync();
 
