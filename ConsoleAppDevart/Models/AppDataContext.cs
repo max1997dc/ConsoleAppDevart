@@ -16,7 +16,7 @@ public class AppDataContext : DbContext
     public virtual DbSet<Grupo> Grupos { get; set; } = null!;
     #endregion
 
-    public const string ConnectionStringDefault = "User Id=DOTNET;Password=DOTNETPASSWORD;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.32.1.114 ) (PORT=1521)))(CONNECT_DATA=(SID=FRB)));";
+    public const string ConnectionStringDefault = "User Id=DOTNET;Password=DOTNETPASSWORD;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.32.1.114 ) (PORT=1521)))(CONNECT_DATA=(SID=FRB)));Direct=true;";
     //public const string DefaultUsername = "DOTNET";
 
     public const string DevartLicenceKey = "Wh/plBbpF2PVfZxmkUhVTr7BoanU8wjjxYRXsmsXZy8NLs9eqO5WFVily7ufYVRC0EHetSMu9cNkvUFELlppltb3dwuZKhCmeu4KjqhMb65du7kv+ygz3WLhbWJj9nqHM4fu7gfMEeVryqcm6VEtYbPJ+aZMmi+P5KYNkHulHgWolB0XyTVOUXZK4ckc65dfnJiASo4YzOHodq5ArYhzMhn4UX946WSQRg0dj+JIe7QkBpnZQ+y1FT9ZyJ9tVYQYwrbYStklGlEajwsc1kRbhkzLjRS5R6uPXljjHyezPGLaUsVC3DnfoyRVZ0wECD3gI7hOn4//W/BY6zq7OAn6Hw==";
