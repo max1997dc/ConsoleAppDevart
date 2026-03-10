@@ -123,5 +123,24 @@ public class UnitGrupos
         Assert.NotNull(records);
     }
 
+    [Fact]
+    public async Task Test_Contain_List2()
+    {
+        string[] names = new string[] { "Grupo1", "Grupo2" };
+        var records = await dbSet
+               .Where(x => names.Contains(x.Name))
+               .ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
+
+    [Fact]
+    public async Task Test_Contain_Include_List2()
+    {
+        string[] names = new string[] { "Grupo1", "Grupo2" };
+        var records = await includeQueryable
+               .Where(x => names.Contains(x.Name))
+               .ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
 
 }
