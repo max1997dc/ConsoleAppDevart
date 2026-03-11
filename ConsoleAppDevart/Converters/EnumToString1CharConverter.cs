@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppDevart.Converters;
+namespace AppDevartClass.Converters;
 public class EnumToString1CharConverter<T> : ValueConverter<T?, string> where T : Enum
 {
     public EnumToString1CharConverter(T defaultT, string defaultString = "") : base(

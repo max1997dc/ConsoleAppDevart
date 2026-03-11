@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace ConsoleAppDevart.Migrations
+namespace AppDevartClass.Migrations
 {
     /// <inheritdoc />
     public partial class AddDati : Migration

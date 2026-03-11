@@ -1,7 +1,7 @@
-﻿using ConsoleAppDevart.Enums;
+﻿using AppDevartClass.Enums;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ConsoleAppDevart.Converters;
+namespace AppDevartClass.Converters;
 
 public class EnumAttivoInattivoToStringConverter : ValueConverter<EnumAtivoInativoBool?, string>
 {

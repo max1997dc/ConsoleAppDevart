@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ConsoleAppDevart.Migrations
+namespace AppDevartClass.Migrations
 {
     /// <inheritdoc />
     public partial class AddRelazione : Migration

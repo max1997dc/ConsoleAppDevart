@@ -1,11 +1,11 @@
-﻿using ConsoleAppDevart.Enums;
-using ConsoleAppDevart.Models;
+﻿using AppDevartClass.Enums;
+using AppDevartClass.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
-using DbSetType = ConsoleAppDevart.Models.Grupo;
-using EnumType = ConsoleAppDevart.Enums.EnumAtivoInativoBool;
+using DbSetType = AppDevartClass.Models.Grupo;
+using EnumType = AppDevartClass.Enums.EnumAtivoInativoBool;
 
 
 namespace TestProject1;
@@ -143,4 +143,14 @@ public class UnitGrupos
         Assert.NotNull(records);
     }
 
+    [Fact]
+    public async Task Test_ContainConstant_Include_List2()
+    {
+        string[] names = new string[] { "Grupo1", "Grupo2" };
+        var records = await includeQueryable
+               .Where(x => EF.Constant(names).Contains(x.Name))
+               .ToListAsync(CancellationToken.None);
+        Assert.NotNull(records);
+    }
+    //EF.Constant(arrayPossibiliValori)
 }

@@ -1,11 +1,11 @@
-﻿using ConsoleAppDevart.Enums;
+﻿using AppDevartClass.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppDevart.Models;
+namespace AppDevartClass.Models;
 public class Person
 {
     public string Name { get; set; }

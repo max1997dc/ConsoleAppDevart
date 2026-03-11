@@ -1,9 +1,9 @@
-﻿using ConsoleAppDevart.Enums;
-using ConsoleAppDevart.Models;
+﻿using AppDevartClass.Enums;
+using AppDevartClass.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
-using DbSetType = ConsoleAppDevart.Models.Person;
-using EnumType = ConsoleAppDevart.Enums.EnumAtivoInativo;
+using DbSetType = AppDevartClass.Models.Person;
+using EnumType = AppDevartClass.Enums.EnumAtivoInativo;
 
 
 namespace TestProject1;

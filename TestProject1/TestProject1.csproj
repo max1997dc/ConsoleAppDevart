@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleAppDevart\ConsoleAppDevart.csproj" />
+    <ProjectReference Include="..\ConsoleAppDevart\AppDevartClass.csproj" />
   </ItemGroup>
 
   <ItemGroup>

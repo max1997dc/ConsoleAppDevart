@@ -1,10 +1,10 @@
-﻿using ConsoleAppDevart.Enums;
-using ConsoleAppDevart.Models;
+﻿using AppDevartClass.Enums;
+using AppDevartClass.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
-using DbSetType = ConsoleAppDevart.Models.Grupo;
+using DbSetType = AppDevartClass.Models.Grupo;
 //using EnumType = ConsoleAppDevart.Enums.EnumAtivoInativoBool;
 
 

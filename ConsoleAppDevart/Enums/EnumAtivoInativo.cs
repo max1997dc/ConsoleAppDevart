@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppDevart.Enums;
+namespace AppDevartClass.Enums;
 public enum EnumAtivoInativo : int
 {
     Ativo = 'A',

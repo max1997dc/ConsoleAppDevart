@@ -1,5 +1,5 @@
-﻿using ConsoleAppDevart.Converters;
-using ConsoleAppDevart.Enums;
+﻿using AppDevartClass.Converters;
+using AppDevartClass.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppDevart.Models;
+namespace AppDevartClass.Models;
 public class AppDataContext : DbContext
 {
     #region DbSet
@@ -38,7 +38,10 @@ public class AppDataContext : DbContext
         if (optionsBuilder.IsConfigured == false)
         {
             optionsBuilder
-            .UseOracle(ConnectionStringDefault + "License Key=" + DevartLicenceKey + ";"
+            .UseOracle(ConnectionStringDefault + "License Key=" + DevartLicenceKey + ";",options => 
+            { 
+                //options.UseRelationalNulls(true); 
+            }
            );
         }
     }
